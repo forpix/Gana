@@ -2,6 +2,7 @@
 <html>
 <head>
 <body background="https://happynewyear2018-wishes.com/wp-content/uploads/2017/10/Happy-new-year-2018-greetings-min.jpg">
+  <h1 style="color:Tomato;text-align:center;">Hello GAMUT GUYS</h1>
 <h1>Get ready guys... only we have </h1>
 
 <style>
@@ -52,7 +53,7 @@ var x = setInterval(function() {
     }
 }, 1000);
 </script>
-
+  <h1 style="position: fixed; bottom: 0; width:100%;color:DodgerBlue;text-align:center;">Its Ali Creation</h1>
 </body>
 </html>
 
