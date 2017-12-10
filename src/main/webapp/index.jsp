@@ -3,7 +3,7 @@
 <head>
 <body background="https://happynewyear2018-wishes.com/wp-content/uploads/2017/10/Happy-new-year-2018-greetings-min.jpg">
   <h1 style="color:Tomato;text-align:center;">Hello GAMUT GUYS</h1>
-<h1>Get ready... we only have </h1>
+<h1>Get ready... we have only </h1>
 
 <style>
 p {
