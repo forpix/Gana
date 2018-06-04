@@ -13,7 +13,7 @@ p {
     background-position: center;
     background-size: cover;
     position: relative;
-    color: powderblue;
+    color: LawnGreen;
     font-family: "Courier New", Courier, monospace;
     font-size: 25px
   text-align: center;
