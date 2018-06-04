@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<body background="http://www.misucell.com/data/out/10/IMG_437725.png">
+<body style="background-color:SlateBlue;">
   <h1 style="color:Tomato;text-align:center;">Hello ARES</h1>
 <h1>Get ready Team... we have only </h1>
   <h1 style="position: fixed; bottom: 0; width:100%;color:DodgerBlue;text-align:center;">Its Ali &trade; Creation</h1>
