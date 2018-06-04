@@ -2,7 +2,7 @@
 <html>
 <head>
 <body background="http://bsnscb.com/data/out/169/39730231-sap-wallpapers.jpg">
-  <h1 style="color:Tomato;text-align:center;">Hello ARES Team</h1>
+  <h1 style="color:Tomato;text-align:center;">Hello ARES</h1>
 <h1>Get ready Team... we have only </h1>
   <h1 style="position: fixed; bottom: 0; width:100%;color:DodgerBlue;text-align:center;">Its Ali &trade; Creation</h1>
 
@@ -13,7 +13,7 @@ p {
     background-position: center;
     background-size: cover;
     position: relative;
-    color: white;
+    color: powderblue;
     font-family: "Courier New", Courier, monospace;
     font-size: 25px
   text-align: center;
