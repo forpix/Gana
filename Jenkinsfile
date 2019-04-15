@@ -11,6 +11,7 @@ def getEmailForJenkinsUser(jenkinsUser){
     email = user.getProperty(hudson.tasks.Mailer.UserProperty.class).getAddress();
   }
   return email;
+}
 
 node ('master') {
   stage ('Remove workspaces' ){
