@@ -2,6 +2,7 @@ import hudson.model.Result
 import java.util.concurrent.TimeUnit
 
 MAX_BUILDS = 2 // max builds to keep
+
 def getEmailForJenkinsUser(jenkinsUser){
   def user = hudson.model.User.getById(jenkinsUser, false);
   def email;
@@ -17,6 +18,6 @@ node ('master') {
     checkout scm
   }
   stage ('extra'){
-   echo "${email}"
+   echo "the email is" +email
   }
 }
