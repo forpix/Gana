@@ -18,6 +18,6 @@ node ('master') {
     checkout scm
   }
   stage ('extra'){
-   echo "the email is" +email
+   echo "the email is" +user
   }
 }
