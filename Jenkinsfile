@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit
 
 MAX_BUILDS = 2 // max builds to keep
 
+@NonCPS
 def getEmailForJenkinsUser(jenkinsUser){
   def user = hudson.model.User.getById(jenkinsUser, false);
   def email;
@@ -10,7 +11,6 @@ def getEmailForJenkinsUser(jenkinsUser){
     email = user.getProperty(hudson.tasks.Mailer.UserProperty.class).getAddress();
   }
   return email;
-  }
 
 node ('master') {
   stage ('Remove workspaces' ){
@@ -18,6 +18,6 @@ node ('master') {
     checkout scm
   }
   stage ('extra'){
-   echo "the email is" +user
+    echo "${user}"+user
   }
 }
