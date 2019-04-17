@@ -2,7 +2,7 @@ import hudson.model.Result
 import java.util.concurrent.TimeUnit
 import com.cloudbees.groovy.cps.NonCPS
 
-MAX_BUILDS = 3 // max builds to keep
+MAX_BUILDS = 2 // max builds to keep
 
 node ('master') {
   stage ('Remove workspaces' ){
