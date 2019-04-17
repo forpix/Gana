@@ -18,8 +18,8 @@ def deleteBuilds(){
     
     for (job in jobs) {
         println "Job: " + job.name
-        try {
-            
+        
+        println '++++++++++++++++++++++++++++++++++++++'   
             def recent = job.builds.limit(MAX_BUILDS)
             println "Recent Builds: "  + recent
             println "============================="
@@ -31,9 +31,8 @@ def deleteBuilds(){
                     println ""
                 }
             }
-        } catch(Exception ex) {
-            continue
-        }
+        
     }
+       
 
 }
