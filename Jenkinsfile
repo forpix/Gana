@@ -3,8 +3,8 @@
 node ('master') {
   stage ('Remove workspaces' ){
     cleanWs()
-   sshagent(['clonecentOS']) {
-   pwd;ls -a;ll
+  sshagent(['newkey']) {
+   sh 'ls -a;pwd'
 }
    
   }
