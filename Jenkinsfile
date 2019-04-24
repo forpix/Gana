@@ -1,15 +1,14 @@
+#!/bin/bash
 import hudson.model.Result
 import java.util.concurrent.TimeUnit
 import com.cloudbees.groovy.cps.NonCPS
 
-MAX_BUILDS = 2 // max builds to keep
-
 node ('master') {
   stage ('Remove workspaces' ){
+    cleanWs()
     sshagent(['clonecentOS']) {
       sh '''
-      ssh -o StrictHostKeyChecking=no root@10.52.98.46
-   pwd;ls -a;cd /home/mdali;ll -a
+      pwd;ls -a
    '''
 }
   }
