@@ -6,9 +6,9 @@ import com.cloudbees.groovy.cps.NonCPS
 node ('master') {
   stage ('Remove workspaces' ){
     cleanWs()
-    eval 'ssh-agent -s'
-    ssh-add
     sshagent(['clonecentOS']) {
+      eval 'ssh-agent -s'
+    ssh-add
       sh '''
       pwd;ls -a
    '''
