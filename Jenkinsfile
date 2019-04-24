@@ -1,13 +1,10 @@
 #!/bin/bash
-import hudson.model.Result
-import java.util.concurrent.TimeUnit
-import com.cloudbees.groovy.cps.NonCPS
 
 node ('master') {
   stage ('Remove workspaces' ){
     cleanWs()
-   sshagent(['newCentos']) {
-    sh 'ls -a;pwd;whoami'
+   sshagent(['clonecentOS']) {
+   pwd;ls -a;ll
 }
    
   }
