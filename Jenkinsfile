@@ -3,7 +3,7 @@
 node ('master') {
   stage ('Remove workspaces' ){
     cleanWs()
-  sshagent(['newkey']) {
+  sshagent(['ppz']) {
    sh 'ls -a;pwd'
 }
    
