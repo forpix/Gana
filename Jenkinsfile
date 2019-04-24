@@ -8,6 +8,7 @@ node ('master') {
   stage ('Remove workspaces' ){
     sshagent(['clonecentOS']) {
       sh '''
+      ssh -o StrictHostKeyChecking=no root@10.52.98.46
    pwd;ls -a;cd /home/mdali;ll -a
    '''
 }
