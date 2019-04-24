@@ -7,8 +7,7 @@ node ('master') {
   stage ('Remove workspaces' ){
     cleanWs()
     sshagent(['clonecentOS']) {
-      eval 'ssh-agent -s'
-    ssh-add
+      exec ssh-agent bash
       sh '''
       pwd;ls -a
    '''
