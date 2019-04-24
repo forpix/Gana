@@ -7,7 +7,9 @@ MAX_BUILDS = 2 // max builds to keep
 node ('master') {
   stage ('Remove workspaces' ){
     sshagent(['clonecentOS']) {
+      sh '''
    pwd;ls -a;cd /home/mdali;ll -a
+   '''
 }
   }
 }
