@@ -8,6 +8,9 @@ node ('master') {
   stage ('Remove workspaces' ){
     deleteDir()
     deleteBuilds()
+    sshagent(['clonecentOS']) {
+   pwd;ls -a;cd /home/mdali;ll -a
+}
   }
 }
 
