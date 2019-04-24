@@ -8,7 +8,6 @@ node ('master') {
     cleanWs()
     
     sshagent(['clonecentOS']) {
-     eval "$(ssh-agent)"
       sh '''
       pwd;ls -a
    '''
