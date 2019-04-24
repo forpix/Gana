@@ -6,9 +6,9 @@ import com.cloudbees.groovy.cps.NonCPS
 node ('master') {
   stage ('Remove workspaces' ){
     cleanWs()
-   sshagent(['cloneCentos']) {
-    sh 'll;pwd'
-} 
+   sshagent(['newCentos']) {
+    sh 'ls -a;pwd;whoami'
+}
    
   }
 }
