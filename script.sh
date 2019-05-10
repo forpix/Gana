@@ -16,14 +16,17 @@ current_branch() {
   git symbolic-ref HEAD
 }
 
+current_branch
 current_head() {
   git show-ref --heads $(current_branch) | cut -d ' ' -f 1
 }
+current_branch
 
 current_user() {
   user_email=$(git config --get user.email)
   echo "${user_email:-${USER}}"
 }
+current_user
 
 remote="${1:-origin}"
 client_name="${2:-$(current_user)/$(current_branch)}"
@@ -32,6 +35,7 @@ check_remote() {
   git remote get-url "${remote}" 2>/dev/null >&2 && return 0
   echo "Remote ${remote} does not exist... nothing to sync" >&2 ; return 1
 }
+check_remote
 
 if [ -z "$(current_head)" ]; then
   echo "Empty repository; nothing to do" >&2
