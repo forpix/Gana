@@ -6,7 +6,7 @@ node {
   remote.name = 'test'
   remote.host = 'ppx009'
   remote.user = 'emroot'
-  remote.password = 'MilanO'
+  remote.password = 'passwd'
   remote.allowAnyHosts = true
   stage('Remote SSH') {
   sshCommand remote: remote, command: "hostname"
