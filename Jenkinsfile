@@ -1,13 +1,20 @@
 #!/bin/bash
 
-node ('master') {
-  stage ('Remove workspaces' ){
-    cleanWs()
-  sshagent(['ppz']) {
-   sh 'ls -a;pwd'
-}
-   
+node {
+  node {
+  def remote = [:]
+  remote.name = 'test'
+  remote.host = 'ppx009'
+  remote.user = 'emroot'
+  remote.password = 'MilanO'
+  remote.allowAnyHosts = true
+  stage('Remote SSH') {
+  sshCommand remote: remote, command: "hostname"
+  sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
   }
+}
+  
+  
 }
 
 @NonCPS
