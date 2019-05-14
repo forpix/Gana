@@ -10,7 +10,6 @@ node {
   remote.allowAnyHosts = true
   stage('Remote SSH') {
   sshCommand remote: remote, command: "hostname"
-  sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
   }
 }
   
