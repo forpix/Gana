@@ -1,17 +1,17 @@
 #!/bin/bash
-
-node {
-  node {
-  def remote = [:]
+def remote = [:]
   remote.name = 'test'
   remote.host = 'ppx009'
-  remote.user = 'emroot'
-  remote.password = 'passwd'
   remote.allowAnyHosts = true
-  stage('Remote SSH') {
-  sshCommand remote: remote, command: "hostname"
-  }
+  node {'
+        stage('Remote SSH') {
+  withCredentials([usernameColonPassword(credentialsId: '25fdc3e3-b596-4d5b-9b99-d90fc40a910b', variable: 'ppx009')]) {
+   sshCommand remote: remote, command: "hostname"
 }
+  remote.user = 'emroot'
+  remote.password = '$passwd'
+  
+        }
   
   
 }
