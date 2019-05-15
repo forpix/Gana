@@ -8,7 +8,7 @@ node {
   remote.password = "${password}"
   remote.allowAnyHosts = true
   stage('Remote SSH') {
-    sshCommand remote: remote, command: "hostname;R3trans -d"
+    sshCommand remote: remote, command: "hostname"
   }
   stage('Docker Version') {
     sshCommand remote: remote, command: "docker --version"
