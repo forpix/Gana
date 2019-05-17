@@ -4,8 +4,8 @@ node {
   def remote = [:]
   remote.name = 'test'
   remote.host = 'ppx155'
-  remote.user = "${emroot}"
-  remote.password = "${passwd}"
+  remote.user = "${username}"
+  remote.password = "${password}"
   remote.allowAnyHosts = true
   stage('Remote SSH') {
     sshCommand remote: remote, command: "hostname"
