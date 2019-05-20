@@ -1,5 +1,9 @@
 #!/bin/bash
 
+def getEmailRecipients() {
+    return ''
+}
+
 node {
   def remote = [:]
   remote.name = 'test'
@@ -9,6 +13,7 @@ node {
   remote.allowAnyHosts = true
   stage('Remote SSH') {
     sshCommand remote: remote, command: "hostname"
+    echo "${getEmailRecipients}"
   }
   stage('Docker Version') {
     sshCommand remote: remote, command: "docker --version"
