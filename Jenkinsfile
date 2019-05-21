@@ -25,7 +25,7 @@ node {
     sshCommand remote: remote, command: "docker container run -it -d --name alto --hostname malto alpine /bin/sh"
   }
   stage('Executing Commands inside the Conta.') {
-    sshCommand remote: remote, command: "docker exec alto hostname"
+    sshCommand remote: remote, command: "docker exec alto 'hostname' "
   }
   stage('Stoping the Container') {
     sshCommand remote: remote, command: "docker stop alto"
