@@ -3,9 +3,7 @@
 node {
 stage ('Build'){
 def userInpuT = input(
- id: 'userInpuT', message: 'Let\'s promote?', parameters: [
- [$class: 'TextParameterDefinition', defaultValue: 'uat', description: 'Environment', name: 'env'],
- [$class: 'TextParameterDefinition', defaultValue: 'uat1', description: 'Target', name: 'target']
+ id: 'userInpuT', message: 'Let\'s promote?', parameters: [[$class: 'TextParameterDefinition', defaultValue: 'uat1', description: 'Target', name: 'target']
     ])
 echo ("Env: "+userInpuT['env'])
 echo ("Target: "+userInpuT['target'])
