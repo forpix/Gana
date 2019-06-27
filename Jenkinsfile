@@ -5,7 +5,6 @@ stage ('Build'){
 def userInpuT = input(
  id: 'userInpuT', message: 'Let\'s promote?', parameters: [
  [$class: 'TextParameterDefinition', defaultValue: '5', description: 'Environment', name: 'env'],
- [$class: 'TextParameterDefinition', defaultValue: '5', description: 'Target', name: 'target']
     ])
 echo ("Env: "+userInpuT['env'])
 echo ("Target: "+userInpuT['target'])
