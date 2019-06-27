@@ -1,14 +1,4 @@
-def userInput
-try {
-    userInput = input(
-        id: 'Proceed1', message: 'Was this successful?', parameters: [
-        [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']
-        ])
-} catch(err) { // input false
-    def user = err.getCauses()[0].getUser()
-    userInput = false
-    echo "Aborted by: [${user}]"
-}
+
 
 node {
 stage ('Build'){
@@ -20,17 +10,10 @@ def userInpuT = input(
     ])
 echo ("Env: "+userInpuT['env'])
 echo ("Target: "+userInpuT['target'])
+    sleep userInpuT['target']
 }
 stage ('Test'){
 echo 'nothing to add'
-    if (userInput == true) {
-        // do something
-        echo "this was successful"
-    } else {
-        // do something else
-        echo "this was not successful"
-        currentBuild.result = 'FAILURE'
-    } 
 }
 stage ('Deploy'){
 echo 'Nothing to add'
