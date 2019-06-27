@@ -2,12 +2,11 @@
 
 node {
 stage ('Build'){
-def INPUT_PARAMS = input message: 'Please Provide Parameters', ok: 'Next',
-                                        parameters: [
-                                        choice(name: 'IMAGE_TAG', choices: ['dev','qa'].join('\n'), description: 'Available Docker Images')]
-                        env.IMAGE_TAG = INPUT_PARAMS.IMAGE_TAG
-                 
-				 echo "${env.IMAGE_TAG}" 
+def userInput = input(
+ id: 'userInput', message: 'Let\'s promote?', parameters: [
+ [$class: 'TextParameterDefinition', defaultValue: 'uat', description: 'Environment', name: 'env']
+])
+echo ("Env: "+userInput)
 }
 stage ('Test'){
 echo 'nothing to add'
