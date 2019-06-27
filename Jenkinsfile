@@ -4,7 +4,7 @@ node {
 stage ('Build'){
 def userInpuT = input(
  id: 'userInpuT', message: 'Let\'s promote?', parameters: [
- [$class: 'TextParameterDefinition', defaultValue: '5', description: 'Environment', name: 'env'],
+ [$class: 'TextParameterDefinition', defaultValue: '5', description: 'Environment', name: 'env']
     ])
     sleep userInpuT['env']		 
 }
