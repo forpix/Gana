@@ -2,7 +2,7 @@
 
 node {
 stage ('Build'){
-checkout scm >> /dev/null
+checkout scm > /dev/null
 }
  stage ('try') {
   
