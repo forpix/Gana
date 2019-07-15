@@ -2,7 +2,11 @@
 
 node {
 stage ('Build'){
-checkout scm
+
+git checkout origin master --q
+}
+ stage ('try') {
+  checkout scm &> /dev/null
 def userInput = input(
  id: 'userInput', message: 'Let\'s promote?', parameters: [
  [$class: 'TextParameterDefinition', defaultValue: 'uat', description: 'Environment', name: 'env']
