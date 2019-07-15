@@ -2,7 +2,7 @@
 
 node {
 stage ('Build'){
-sh 'git fetch;git checkout origin master --q' 
+checkout scm >> /dev/null
 }
  stage ('try') {
   
