@@ -2,7 +2,9 @@
 
 node {
 stage ('Build'){
-checkout scm > /dev/null
+ def outfile = "/tmp/output.log"
+ 
+checkout scm > ${outfile} 2>&1 < /dev/null
 }
  stage ('try') {
   
