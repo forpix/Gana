@@ -3,6 +3,8 @@
 node {
 stage ('Build'){
  def outfile = "/tmp/output.log"
+String[] sleepCmd = ["sh", "-c", "checkout scm > ${outfile} 2>&1 < /dev/null"]
+def sleep = sleepCmd.execute()
  
 checkout scm > /null
 }
