@@ -4,7 +4,7 @@ node {
 stage ('Build'){
  def outfile = "/tmp/output.log"
  
-checkout scm > outfile
+checkout scm > /dev/null 2>&1
 }
  stage ('try') {
   
