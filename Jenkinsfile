@@ -2,8 +2,9 @@
 
 node {
 stage ('Build'){
-
+ sh "
 git checkout origin master --q
+ "
 }
  stage ('try') {
   
