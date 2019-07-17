@@ -1,13 +1,18 @@
-
+import java.io.IOException;
+import java.io.OutputStream;
+import hudson.model.*
+import jenkins.model.*
+import org.jenkinsci.plugins.github_branch_source.GitHubSCMSource
+import org.jenkinsci.plugins.workflow.libs.LibraryConfiguration
+import org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever
+import hudson.model.UpdateCenter.CoreUpdateMonitor
 
 node {
 stage ('Build'){
- def outfile = "/tmp/output.log"
-String[] sleepCmd = ["sh", "-c", "checkout scm > ${outfile} 2>&1 < /dev/null"]
-def sleep = sleepCmd.execute()
- sleep
- 
-checkout scm > /null
+ def plugins = [ "artifactory",
+                 "startup-trigger-plugin",
+                  "ws-cleanup" ]
+                    pluginsInstalled = installPlugins(plugins: plugins)
 }
  stage ('try') {
   
