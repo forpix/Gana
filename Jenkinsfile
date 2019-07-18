@@ -1,18 +1,9 @@
-import java.io.IOException;
-import java.io.OutputStream;
-import hudson.model.*
-import jenkins.model.*
-import org.jenkinsci.plugins.github_branch_source.GitHubSCMSource
-import org.jenkinsci.plugins.workflow.libs.LibraryConfiguration
-import org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever
-import hudson.model.UpdateCenter.CoreUpdateMonitor
+def signature = 'new groovy.json.JsonSlurperClassic'
+org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval.get().approveSignature(signature)
 
 node {
 stage ('Build'){
- def plugins = [ "artifactory",
-                 "startup-trigger-plugin",
-                  "ws-cleanup" ]
-                    pluginsInstalled = installPlugins(plugins: plugins)
+ println 'try this'
 }
  stage ('try') {
   
