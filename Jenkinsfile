@@ -3,7 +3,13 @@ org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval.get().approveSignatu
 
 node {
 stage ('Build'){
- println 'try this'
+def command = "git --version"
+def proc = command.execute()
+proc.waitFor()              
+println "Process exit code: ${proc.exitValue()}"
+println "Std Err: ${proc.err.text}"
+println "Std Out: ${proc.in.text}" 
+   
 }
  stage ('try') {
   
