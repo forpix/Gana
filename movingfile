@@ -1,4 +1,4 @@
-node(‘master’) {
+node {
 dir('/var/lib/jenkins/jobs') {
 stash 'aunit Testo1 Demo Migratio scm '
 }
