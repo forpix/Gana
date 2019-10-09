@@ -1,0 +1,9 @@
+node(‘master’) {
+dir('/var/lib/jenkins/jobs') {
+stash 'aunit Testo1 Demo Migratio scm '
+}
+}
+node('Sailfish1') {
+dir('/var/lib/jenkins/jobs') {
+unstash 'aunit Testo1 Demo Migratio scm'
+}
