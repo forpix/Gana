@@ -1,10 +1,10 @@
 node {
 dir('/var/lib/jenkins/jobs') {
-stash 'aunit Testo1 Demo Migratio scm '
+stash 'aunit'
 }
 }
 node('Sailfish1') {
 dir('/var/lib/jenkins/jobs') {
-unstash 'aunit Testo1 Demo Migratio scm'
+unstash 'aunit'
 }
 }
